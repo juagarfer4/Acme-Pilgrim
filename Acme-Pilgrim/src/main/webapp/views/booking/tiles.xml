@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2013 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+	
+	<definition name="booking/pilgrim/list" extends="master.page">	
+		<put-attribute name="title" value="List of bookings by pilgrim"/>
+		<put-attribute name="body" value="/views/booking/list.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/listtoassess" extends="master.page">	
+		<put-attribute name="title" value="List of bookings by pilgrim to be assessed"/>
+		<put-attribute name="body" value="/views/booking/list.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit a booking"/>
+		<put-attribute name="body" value="/views/booking/edit.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/editbeds" extends="master.page">	
+		<put-attribute name="title" value="Edit a booking's beds"/>
+		<put-attribute name="body" value="/views/booking/editbeds.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/editnights" extends="master.page">	
+		<put-attribute name="title" value="Edit a booking's nights"/>
+		<put-attribute name="body" value="/views/booking/editnights.jsp" />
+	</definition>
+	
+	<definition name="booking/innkeeper/list" extends="master.page">	
+		<put-attribute name="title" value="List of bookings by innkeeper and date" />
+		<put-attribute name="body" value="/views/booking/list.jsp" />
+	</definition>
+	
+	<definition name="booking/innkeeper/search" extends="master.page">	
+		<put-attribute name="title" value="List of bookings by date" />
+		<put-attribute name="body" value="/views/booking/list.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/delete" extends="master.page">	
+		<put-attribute name="title" value="Cancel a booking" />
+		<put-attribute name="body" value="/views/booking/edit.jsp" />
+	</definition>
+	
+</tiles-definitions>

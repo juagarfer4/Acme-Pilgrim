@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * PopulateDatabase.xml * * Copyright (C) 2014 Universidad de Sevilla 
+	* * The use of this project is hereby constrained to the conditions of the 
+	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+
+	<!-- User accounts -->
+
+	<bean id="userAccount1" class="security.UserAccount">
+		<property name="username" value="administrator1" />
+		<property name="password" value="d5cee333abe432891a0de57d0ee38713" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2" class="security.UserAccount">
+		<property name="username" value="administrator2" />
+		<property name="password" value="82954495ff7e2a735ed2192c35b2cd00" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMINISTRATOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="userAccount3" class="security.UserAccount">
+		<property name="username" value="pilgrim1" />
+		<property name="password" value="e700b4f1f35396cd2de859b7ecf76ba3" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="PILGRIM" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount4" class="security.UserAccount">
+		<property name="username" value="pilgrim2" />
+		<property name="password" value="8139696ea703375ab61f037b5792609e" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="PILGRIM" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount5" class="security.UserAccount">
+		<property name="username" value="innkeeper1" />
+		<property name="password" value="86903e666824a841e9e3d50e4b1240bf" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="INNKEEPER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="userAccount6" class="security.UserAccount">
+		<property name="username" value="innkeeper2" />
+		<property name="password" value="5b666146423e686ba85a21cbd55f0446" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="INNKEEPER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Other domain beans come here -->
+
+	<!-- CreditCard -->
+
+	<bean id="creditCard1" class="domain.CreditCard">
+		<property name="holderName" value="pilgrim1" />
+		<property name="brandName" value="Visa" />
+		<property name="expirationMonth" value="7" />
+		<property name="expirationYear" value="2016" />
+		<property name="cVVCode" value="588" />
+		<property name="cardNumber" value="4556765502061508" />
+	</bean>
+
+	<bean id="creditCard2" class="domain.CreditCard">
+		<property name="holderName" value="pilgrim2" />
+		<property name="brandName" value="MasterCard" />
+		<property name="expirationMonth" value="2" />
+		<property name="expirationYear" value="2017" />
+		<property name="cVVCode" value="645" />
+		<property name="cardNumber" value="5460681879712742" />
+	</bean>
+
+	<!-- GPS -->
+
+	<bean id="gPS1" class="domain.GPS">
+		<property name="title" value="gPS1" />
+		<property name="description" value="descriptionGPS1" />
+		<property name="longitude" value="45.5" />
+		<property name="latitude" value="65.2" />
+		<property name="altitude" value="14.23" />
+	</bean>
+
+	<bean id="gPS2" class="domain.GPS">
+		<property name="title" value="gPS2" />
+		<property name="description" value="descriptionGPS2" />
+		<property name="longitude" value="45.5" />
+		<property name="latitude" value="65.2" />
+		<property name="altitude" value="14.23" />
+	</bean>
+
+	<bean id="gPS3" class="domain.GPS">
+		<property name="title" value="gPS3" />
+		<property name="description" value="descriptionGPS3" />
+		<property name="longitude" value="45.5" />
+		<property name="latitude" value="65.2" />
+		<property name="altitude" value="14.23" />
+	</bean>
+
+	<bean id="gPS4" class="domain.GPS">
+		<property name="title" value="gPS4" />
+		<property name="description" value="descriptionGPS4" />
+		<property name="longitude" value="45.5" />
+		<property name="latitude" value="65.2" />
+		<property name="altitude" value="14.23" />
+	</bean>
+
+	<bean id="gPS5" class="domain.GPS">
+		<property name="title" value="gPS5" />
+		<property name="description" value="descriptionGPS5" />
+		<property name="longitude" value="45.5" />
+		<property name="latitude" value="65.2" />
+		<property name="altitude" value="14.23" />
+	</bean>
+
+	<bean id="gPS6" class="domain.GPS">
+		<property name="title" value="gPS6" />
+		<property name="description" value="descriptionGPS6" />
+		<property name="longitude" value="45.5" />
+		<property name="latitude" value="65.2" />
+		<property name="altitude" value="14.23" />
+	</bean>
+
+	<!-- Administrator -->
+
+	<bean id="administrator1" class="domain.Administrator">
+		<property name="name" value="nameAdministrator1" />
+		<property name="surname" value="surnameAdministrator1" />
+		<property name="email" value="administrator1@us.es" />
+		<property name="contactPhone" value="612345678" />
+		<property name="homePage" value="http://www.administrator1.com" />
+		<property name="userAccount">
+			<ref bean="userAccount1" />
+		</property>
+		<property name="requests">
+			<list>
+				<ref bean="request1" />
+				<ref bean="request2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="administrator2" class="domain.Administrator">
+		<property name="name" value="nameAdministrator2" />
+		<property name="surname" value="surnameAdministrator2" />
+		<property name="email" value="administrator2@us.es" />
+		<property name="contactPhone" value="623456789" />
+		<property name="homePage" value="http://www.administrator2.com" />
+		<property name="userAccount">
+			<ref bean="userAccount2" />
+		</property>
+		<property name="requests">
+			<list>
+				<ref bean="request3" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Pilgrim -->
+
+	<bean id="pilgrim1" class="domain.Pilgrim">
+		<property name="name" value="namePilgrim1" />
+		<property name="surname" value="surnamePilgrim1" />
+		<property name="email" value="pilgrim1@us.es" />
+		<property name="contactPhone" value="623456789" />
+		<property name="homePage" value="http://www.pilgrim1.com" />
+		<property name="userAccount">
+			<ref bean="userAccount3" />
+		</property>
+		<property name="creditCard">
+			<ref bean="creditCard1" />
+		</property>
+		<property name="birthDate" value="01/01/1970" />
+		<property name="nationality" value="German" />
+		<property name="registrations">
+			<list>
+				<ref bean="registration1" />
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+				<ref bean="booking1" />
+				<ref bean="booking2" />
+				<ref bean="booking4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="pilgrim2" class="domain.Pilgrim">
+		<property name="name" value="namePilgrim2" />
+		<property name="surname" value="surnamePilgrim2" />
+		<property name="email" value="pilgrim2@us.es" />
+		<property name="contactPhone" value="634567890" />
+		<property name="homePage" value="http://www.pilgrim2.com" />
+		<property name="userAccount">
+			<ref bean="userAccount4" />
+		</property>
+		<property name="creditCard">
+			<ref bean="creditCard2" />
+		</property>
+		<property name="birthDate" value="08/08/1988" />
+		<property name="nationality" value="Peruvian" />
+		<property name="registrations">
+			<list>
+				<ref bean="registration2" />
+			</list>
+		</property>
+		<property name="bookings">
+			<list>
+				<ref bean="booking3" />
+			</list>
+		</property>
+
+	</bean>
+
+	<!-- Innkeeper -->
+
+	<bean id="innkeeper1" class="domain.Innkeeper">
+		<property name="name" value="nameInnkeeper1" />
+		<property name="surname" value="surnameInnkeeper1" />
+		<property name="email" value="innkeeper1@us.es" />
+		<property name="contactPhone" value="623456789" />
+		<property name="homePage" value="http://www.innkeeper1.com" />
+		<property name="userAccount">
+			<ref bean="userAccount5" />
+		</property>
+		<property name="creditCard">
+			<ref bean="creditCard1" />
+		</property>
+		<property name="lodges">
+			<list>
+				<ref bean="lodge1" />
+				<ref bean="lodge2" />
+			</list>
+		</property>
+		<property name="requests">
+			<list>
+				<ref bean="request1" />
+				<ref bean="request2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="innkeeper2" class="domain.Innkeeper">
+		<property name="name" value="nameInnkeeper2" />
+		<property name="surname" value="surnameInnkeeper2" />
+		<property name="email" value="innkeeper2@us.es" />
+		<property name="contactPhone" value="623456789" />
+		<property name="homePage" value="http://www.innkeeper2.com" />
+		<property name="userAccount">
+			<ref bean="userAccount6" />
+		</property>
+		<property name="creditCard">
+			<ref bean="creditCard1" />
+		</property>
+		<property name="lodges">
+			<list>
+				<ref bean="lodge3" />
+			</list>
+		</property>
+		<property name="requests">
+			<list>
+				<ref bean="request3" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Request -->
+
+	<bean id="request1" class="domain.Request">
+		<property name="code" value="codeRequest1" />
+		<property name="title" value="titleRequest1" />
+		<property name="creationMoment" value="02/02/2015" />
+		<property name="description" value="descriptionRequest1" />
+		<property name="status" value="REJECTED" />
+		<property name="comments" value="commentsRequest1" />
+		<property name="administrator">
+			<ref bean="administrator1" />
+		</property>
+		<property name="innkeeper">
+			<ref bean="innkeeper1" />
+		</property>
+	</bean>
+
+	<bean id="request2" class="domain.Request">
+		<property name="code" value="codeRequest2" />
+		<property name="title" value="titleRequest2" />
+		<property name="creationMoment" value="02/02/2015" />
+		<property name="description" value="descriptionRequest2" />
+		<property name="status" value="REJECTED" />
+		<property name="comments" value="commentsRequest2" />
+		<property name="administrator">
+			<ref bean="administrator1" />
+		</property>
+		<property name="innkeeper">
+			<ref bean="innkeeper1" />
+		</property>
+	</bean>
+	<bean id="request3" class="domain.Request">
+		<property name="code" value="codeRequest3" />
+		<property name="title" value="titleRequest3" />
+		<property name="creationMoment" value="02/02/2015" />
+		<property name="description" value="descriptionRequest3" />
+		<property name="status" value="PENDING" />
+		<property name="comments" value="commentsRequest3" />
+		<property name="administrator">
+			<ref bean="administrator2" />
+		</property>
+		<property name="innkeeper">
+			<ref bean="innkeeper2" />
+		</property>
+	</bean>
+
+
+	<!-- Route -->
+
+	<bean id="route1" class="domain.Route">
+		<property name="name" value="nameRoute1" />
+		<property name="description" value="descriptionRoute1" />
+		<property name="lengthRating" value="8.0" />
+		<property name="difficultyRating" value="7.0" />
+		<property name="orderers">
+			<list>
+				<ref bean="orderer1" />
+			</list>
+		</property>
+		<property name="registrations">
+			<list>
+				<ref bean="registration1" />
+				<ref bean="registration2" />
+			</list>
+		</property>
+		<property name="isDeleted" value="false" />
+	</bean>
+
+	<bean id="route2" class="domain.Route">
+		<property name="name" value="nameRoute2" />
+		<property name="description" value="descriptionRoute2" />
+		<property name="lengthRating" value="8.0" />
+		<property name="difficultyRating" value="7.0" />
+		<property name="orderers">
+			<list>
+				<ref bean="orderer2" />
+			</list>
+		</property>
+		<property name="registrations">
+			<list>
+			</list>
+		</property>
+		<property name="isDeleted" value="false" />
+	</bean>
+
+	<bean id="route3" class="domain.Route">
+		<property name="name" value="nameRoute3" />
+		<property name="description" value="descriptionRoute3" />
+		<property name="orderers">
+			<list>
+			</list>
+		</property>
+		<property name="registrations">
+			<list>
+			</list>
+		</property>
+		<property name="isDeleted" value="false" />
+	</bean>
+
+	<!-- Stage -->
+
+	<bean id="stage1" class="domain.Stage">
+		<property name="name" value="nameStage1" />
+		<property name="description" value="descriptionStage1" />
+		<property name="sourceLocation">
+			<ref bean="gPS1" />
+		</property>
+		<property name="destinationLocation">
+			<ref bean="gPS2" />
+		</property>
+		<property name="length" value="56.2" />
+		<property name="difficultyLevel" value="6" />
+		<property name="orderers">
+			<list>
+				<ref bean="orderer1" />
+				<ref bean="orderer2" />
+			</list>
+		</property>
+		<property name="stageInstances">
+			<list>
+				<ref bean="stageInstance1" />
+			</list>
+		</property>
+		<property name="lodges">
+			<list>
+				<ref bean="lodge1" />
+				<ref bean="lodge2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="stage2" class="domain.Stage">
+		<property name="name" value="nameStage2" />
+		<property name="description" value="descriptionStage2" />
+		<property name="sourceLocation">
+			<ref bean="gPS3" />
+		</property>
+		<property name="destinationLocation">
+			<ref bean="gPS4" />
+		</property>
+		<property name="length" value="154.2" />
+		<property name="difficultyLevel" value="7" />
+		<property name="orderers">
+			<list>
+			</list>
+		</property>
+		<property name="stageInstances">
+			<list>
+				<ref bean="stageInstance2" />
+			</list>
+		</property>
+		<property name="lodges">
+			<list>
+				<ref bean="lodge3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="stage3" class="domain.Stage">
+		<property name="name" value="nameStage3" />
+		<property name="description" value="descriptionStage3" />
+		<property name="sourceLocation">
+			<ref bean="gPS3" />
+		</property>
+		<property name="destinationLocation">
+			<ref bean="gPS4" />
+		</property>
+		<property name="length" value="56.2" />
+		<property name="difficultyLevel" value="6" />
+		<!-- <property name="lengthRating" value="1.0" /> -->
+		<!-- <property name="difficultyRating" value="1.0" /> -->
+		<property name="orderers">
+			<list>
+			</list>
+		</property>
+		<property name="stageInstances">
+			<list>
+			</list>
+		</property>
+		<property name="lodges">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Orderer -->
+
+	<bean id="orderer1" class="domain.Orderer">
+		<property name="identifier" value="4" />
+		<property name="route">
+			<ref bean="route1" />
+		</property>
+		<property name="stage">
+			<ref bean="stage1" />
+		</property>
+	</bean>
+
+	<bean id="orderer2" class="domain.Orderer">
+		<property name="identifier" value="5" />
+		<property name="route">
+			<ref bean="route2" />
+		</property>
+		<property name="stage">
+			<ref bean="stage1" />
+		</property>
+	</bean>
+
+	<!-- Registration -->
+
+	<bean id="registration1" class="domain.Registration">
+		<property name="moment" value="02/01/2014" />
+		<property name="route">
+			<ref bean="route1" />
+		</property>
+		<property name="pilgrim">
+			<ref bean="pilgrim1" />
+		</property>
+		<property name="StageInstances">
+			<list>
+				<ref bean="stageInstance1" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="registration2" class="domain.Registration">
+		<property name="moment" value="02/01/2014" />
+		<property name="route">
+			<ref bean="route2" />
+		</property>
+		<property name="pilgrim">
+			<ref bean="pilgrim2" />
+		</property>
+		<property name="StageInstances">
+			<list>
+				<ref bean="stageInstance2" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- StageInstance -->
+
+	<bean id="stageInstance1" class="domain.StageInstance">
+		<property name="startingMoment" value="02/01/2014" />
+		<property name="endingMoment" value="02/02/2014" />
+		<property name="comments" value="commentStageInstance1" />
+		<property name="assessment">
+			<ref bean="assessment1" />
+		</property>
+		<property name="stage">
+			<ref bean="stage1" />
+		</property>
+		<property name="registration">
+			<ref bean="registration1" />
+		</property>
+	</bean>
+
+	<bean id="stageInstance2" class="domain.StageInstance">
+		<property name="startingMoment" value="02/01/2014" />
+		<property name="endingMoment" value="02/02/2014" />
+		<property name="comments" value="commentStageInstance2" />
+		<!-- <property name="assessment"> -->
+		<!-- <ref bean="assessment2" /> -->
+		<!-- </property> -->
+		<property name="stage">
+			<ref bean="stage2" />
+		</property>
+		<property name="registration">
+			<ref bean="registration2" />
+		</property>
+	</bean>
+
+	<!-- Assessment -->
+
+	<bean id="assessment1" class="domain.Assessment">
+		<property name="creationMoment" value="02/02/2015" />
+		<property name="lengthRating" value="8" />
+		<property name="difficultyRating" value="7" />
+		<property name="comment" value="comentAssessment1" />
+		<property name="stageInstance">
+			<ref bean="stageInstance1" />
+		</property>
+	</bean>
+
+	<!-- <bean id="assessment2" class="domain.Assessment"> -->
+	<!-- <property name="creationMoment" value="02/02/2015" /> -->
+	<!-- <property name="lengthRating" value="5" /> -->
+	<!-- <property name="difficultyRating" value="7" /> -->
+	<!-- <property name="comment" value="comentAssessment2" /> -->
+	<!-- <property name="stageInstance"> -->
+	<!-- <ref bean="stageInstance2" /> -->
+	<!-- </property> -->
+	<!-- </bean> -->
+
+	<!-- Lodge -->
+
+	<bean id="lodge1" class="domain.Lodge">
+		<property name="name" value="nameLodge1" />
+		<property name="address" value="addressLodge1" />
+		<property name="coordinates">
+			<ref bean="gPS1" />
+		</property>
+		<property name="webSite" value="http://www.lodge1.com" />
+		<property name="contactPhone" value="623456789" />
+		<property name="lodgeDescription" value="descriptionLodge1" />
+		<property name="numberOfBeds" value="28" />
+		<property name="price" value="18.5" />
+		<property name="locationRating" value="3.5" />
+		<property name="roomsRating" value="5.5" />
+		<property name="serviceRating" value="5" />
+		<property name="priceRating" value="7" />
+		<property name="rating" value="5.25" />
+		<property name="stage">
+			<ref bean="stage1" />
+		</property>
+		<property name="innkeeper">
+			<ref bean="innkeeper1" />
+		</property>
+		<property name="bookings">
+			<list>
+				<ref bean="booking1" />
+				<ref bean="booking3" />
+				<ref bean="booking4" />
+			</list>
+		</property>
+		<property name="lodgeCalendars">
+			<list>
+				<ref bean="lodgeCalendar1" />
+				<ref bean="lodgeCalendar2" />
+				<ref bean="lodgeCalendar3" />
+				<ref bean="lodgeCalendar4" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="lodge2" class="domain.Lodge">
+		<property name="name" value="nameLodge2" />
+		<property name="address" value="addressLodge2" />
+		<property name="coordinates">
+			<ref bean="gPS2" />
+		</property>
+		<property name="webSite" value="http://www.lodge2.com" />
+		<property name="contactPhone" value="623456789" />
+		<property name="lodgeDescription" value="descriptionLodge2" />
+		<property name="numberOfBeds" value="42" />
+		<property name="price" value="16.5" />
+		<property name="locationRating" value="7" />
+		<property name="roomsRating" value="5" />
+		<property name="serviceRating" value="9" />
+		<property name="priceRating" value="8" />
+		<property name="rating" value="7.25" />
+		<property name="stage">
+			<ref bean="stage1" />
+		</property>
+		<property name="innkeeper">
+			<ref bean="innkeeper1" />
+		</property>
+		<property name="bookings">
+			<list>
+				<ref bean="booking2" />
+			</list>
+		</property>
+		<property name="lodgeCalendars">
+			<list>
+				<ref bean="lodgeCalendar5" />
+				<ref bean="lodgeCalendar6" />
+				<ref bean="lodgeCalendar7" />
+				<ref bean="lodgeCalendar8" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="lodge3" class="domain.Lodge">
+		<property name="name" value="nameLodge3" />
+		<property name="address" value="addressLodge3" />
+		<property name="coordinates">
+			<ref bean="gPS3" />
+		</property>
+		<property name="webSite" value="http://www.lodge3.com" />
+		<property name="contactPhone" value="623456789" />
+		<property name="lodgeDescription" value="descriptionLodge3" />
+		<property name="numberOfBeds" value="14" />
+		<property name="price" value="13.5" />
+		<property name="stage">
+			<ref bean="stage2" />
+		</property>
+		<property name="innkeeper">
+			<ref bean="innkeeper2" />
+		</property>
+		<property name="bookings">
+			<list>
+			</list>
+		</property>
+		<property name="lodgeCalendars">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<!-- LodgeCalendar -->
+
+	<bean id="lodgeCalendar1" class="domain.LodgeCalendar">
+		<property name="date" value="05/05/2015" />
+<!-- 		<property name="numberOfBeds" value="26" /> -->
+		<property name="numberOfBeds" value="22" />
+		<property name="lodge">
+			<ref bean="lodge1" />
+		</property>
+	</bean>
+	
+	<bean id="lodgeCalendar2" class="domain.LodgeCalendar">
+		<property name="date" value="05/06/2015" />
+<!-- 		<property name="numberOfBeds" value="27" /> -->
+		<property name="numberOfBeds" value="23" />
+		<property name="lodge">
+			<ref bean="lodge1" />
+		</property>
+	</bean>		
+	
+	<bean id="lodgeCalendar3" class="domain.LodgeCalendar">
+		<property name="date" value="05/03/2015" />
+		<property name="numberOfBeds" value="27" />
+		<property name="lodge">
+			<ref bean="lodge1" />
+		</property>
+	</bean>
+	
+	<bean id="lodgeCalendar4" class="domain.LodgeCalendar">
+		<property name="date" value="05/04/2015" />
+		<property name="numberOfBeds" value="27" />
+		<property name="lodge">
+			<ref bean="lodge1" />
+		</property>
+	</bean>
+		
+	<bean id="lodgeCalendar5" class="domain.LodgeCalendar">
+		<property name="date" value="04/05/2015" />
+		<property name="numberOfBeds" value="40" />
+		<property name="lodge">
+			<ref bean="lodge2" />
+		</property>
+	</bean>
+		
+	<bean id="lodgeCalendar6" class="domain.LodgeCalendar">
+		<property name="date" value="04/06/2015" />
+		<property name="numberOfBeds" value="40" />
+		<property name="lodge">
+			<ref bean="lodge2" />
+		</property>
+	</bean>
+		
+	<bean id="lodgeCalendar7" class="domain.LodgeCalendar">
+		<property name="date" value="04/07/2015" />
+		<property name="numberOfBeds" value="40" />
+		<property name="lodge">
+			<ref bean="lodge2" />
+		</property>
+	</bean>
+		
+	<bean id="lodgeCalendar8" class="domain.LodgeCalendar">
+		<property name="date" value="04/08/2015" />
+		<property name="numberOfBeds" value="40" />
+		<property name="lodge">
+			<ref bean="lodge2" />
+		</property>
+	</bean>
+	
+
+	<!-- Booking -->
+
+	<bean id="booking1" class="domain.Booking">
+		<property name="creationMoment" value="02/01/2015" />
+		<property name="arrivalDate" value="05/05/2015" />
+		<property name="numberOfNights" value="2" />
+<!-- 		<property name="numberOfBedsRequested" value="1" /> -->
+		<property name="numberOfBedsRequested" value="5" />
+		<property name="price" value="37" />
+		<property name="isCancelled" value="false" />
+		<property name="comments" value="commentsBooking1" />
+<!-- 		<property name="lodgeAssessment"> -->
+<!-- 			<ref bean="lodgeAssessment1" /> -->
+<!-- 		</property> -->
+		<property name="pilgrim">
+			<ref bean="pilgrim1" />
+		</property>
+		<property name="lodge">
+			<ref bean="lodge1" />
+		</property>
+	</bean>
+
+	<bean id="booking2" class="domain.Booking">
+		<property name="creationMoment" value="01/01/2015" />
+		<property name="arrivalDate" value="04/05/2015" />
+		<property name="numberOfNights" value="4" />
+		<property name="numberOfBedsRequested" value="2" />
+		<property name="price" value="132" />
+		<property name="isCancelled" value="false" />
+		<property name="comments" value="commentsBooking2" />
+		<property name="lodgeAssessment">
+			<ref bean="lodgeAssessment2" />
+		</property>
+		<property name="pilgrim">
+			<ref bean="pilgrim1" />
+		</property>
+		<property name="lodge">
+			<ref bean="lodge2" />
+		</property>
+	</bean>
+
+	<bean id="booking3" class="domain.Booking">
+		<property name="creationMoment" value="02/01/2015" />
+		<property name="arrivalDate" value="05/03/2015" />
+		<property name="numberOfNights" value="3" />
+		<property name="numberOfBedsRequested" value="1" />
+		<property name="price" value="55.5" />
+		<property name="isCancelled" value="false" />
+		<property name="comments" value="commentsBooking3" />
+		<property name="lodgeAssessment">
+			<ref bean="lodgeAssessment3" />
+		</property>
+		<property name="pilgrim">
+			<ref bean="pilgrim2" />
+		</property>
+		<property name="lodge">
+			<ref bean="lodge1" />
+		</property>
+	</bean>
+
+	<bean id="booking4" class="domain.Booking">
+		<property name="creationMoment" value="01/01/2015" />
+		<property name="arrivalDate" value="01/01/2015" />
+		<property name="numberOfNights" value="4" />
+		<property name="numberOfBedsRequested" value="2" />
+		<property name="price" value="132" />
+		<property name="isCancelled" value="false" />
+		<property name="comments" value="commentsBooking4" />
+		<property name="pilgrim">
+			<ref bean="pilgrim1" />
+		</property>
+		<property name="lodge">
+			<ref bean="lodge1" />
+		</property>
+	</bean>
+
+	<!-- LodgeAssessment -->
+
+<!-- 	<bean id="lodgeAssessment1" class="domain.LodgeAssessment"> -->
+<!-- 		<property name="creationMoment" value="01/02/1015" /> -->
+<!-- 		<property name="comments" value="commentslodgeAssessment1" /> -->
+<!-- 		<property name="locationAppreciation" value="6" /> -->
+<!-- 		<property name="roomsAppreciation" value="3" /> -->
+<!-- 		<property name="serviceAppreciation" value="4" /> -->
+<!-- 		<property name="priceAppreciation" value="5" /> -->
+<!-- 		<property name="booking"> -->
+<!-- 			<ref bean="booking1" /> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+
+
+	<bean id="lodgeAssessment2" class="domain.LodgeAssessment">
+		<property name="creationMoment" value="03/02/1015" />
+		<property name="comments" value="commentslodgeAssessment2" />
+		<property name="locationAppreciation" value="7" />
+		<property name="roomsAppreciation" value="5" />
+		<property name="serviceAppreciation" value="9" />
+		<property name="priceAppreciation" value="8" />
+		<property name="booking">
+			<ref bean="booking2" />
+		</property>
+	</bean>
+
+
+	<bean id="lodgeAssessment3" class="domain.LodgeAssessment">
+		<property name="creationMoment" value="01/01/1015" />
+		<property name="comments" value="commentslodgeAssessment3" />
+		<property name="locationAppreciation" value="1" />
+		<property name="roomsAppreciation" value="8" />
+		<property name="serviceAppreciation" value="6" />
+		<property name="priceAppreciation" value="9" />
+		<property name="booking">
+			<ref bean="booking3" />
+		</property>
+	</bean>
+
+
+
+
+</beans>

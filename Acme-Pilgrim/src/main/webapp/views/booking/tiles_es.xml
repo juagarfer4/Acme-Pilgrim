@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles_es.xml
+ *
+ * Copyright (C) 2013 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+      
+<tiles-definitions>
+	
+	<definition name="booking/pilgrim/list" extends="master.page">	
+		<put-attribute name="title" value="Lista de reservas por peregrino"/>
+		<put-attribute name="body" value="/views/booking/list.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/listtoassess" extends="master.page">	
+		<put-attribute name="title" value="Lista de reservas por peregrino sin evaluar"/>
+		<put-attribute name="body" value="/views/booking/list.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/edit" extends="master.page">	
+		<put-attribute name="title" value="Editar una reserva"/>
+		<put-attribute name="body" value="/views/booking/edit.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/editbeds" extends="master.page">	
+		<put-attribute name="title" value="Editar las camas de una reserva"/>
+		<put-attribute name="body" value="/views/booking/editbeds.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/editnights" extends="master.page">	
+		<put-attribute name="title" value="Editar las noches de una reserva"/>
+		<put-attribute name="body" value="/views/booking/editnights.jsp" />
+	</definition>
+	
+	<definition name="booking/innkeeper/list" extends="master.page">	
+		<put-attribute name="title" value="Lista de reservas por posadero y fecha" />
+		<put-attribute name="body" value="/views/booking/list.jsp" />
+	</definition>
+	
+	<definition name="booking/innkeeper/search" extends="master.page">	
+		<put-attribute name="title" value="Lista de reservas por fecha" />
+		<put-attribute name="body" value="/views/booking/list.jsp" />
+	</definition>
+	
+	<definition name="booking/pilgrim/delete" extends="master.page">	
+		<put-attribute name="title" value="Cancelar una reserva" />
+		<put-attribute name="body" value="/views/booking/edit.jsp" />
+	</definition>
+	
+</tiles-definitions>
