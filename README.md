@@ -1,2 +1,2 @@
 # Acme-Pilgrim
-Sistema de información web para la gestión de rutas turísticas y reservas hoteleras.
+Sistema de información web para la gestión de rutas turísticas y reservas hoteleras
